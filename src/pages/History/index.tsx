@@ -1,4 +1,4 @@
-import { HistoryContainer, HistoryList } from './styles'
+import { HistoryContainer, HistoryList, Status } from './styles'
 
 export function History() {
   return (
@@ -19,43 +19,57 @@ export function History() {
               <td>Tarefa</td>
               <td>30:00 minutos</td>
               <td>Há dois dias</td>
-              <td>Em andamentos</td>
+              <td>
+                <Status statusColor="yellow">Em andamentos</Status>
+              </td>
             </tr>
             <tr>
               <td>Tarefa</td>
               <td>30:00 minutos</td>
               <td>Há dois dias</td>
-              <td>Em andamentos</td>
+              <td>
+                <Status statusColor="red">Em andamentos</Status>
+              </td>
             </tr>
             <tr>
               <td>Tarefa</td>
               <td>30:00 minutos</td>
               <td>Há dois dias</td>
-              <td>Em andamentos</td>
+              <td>
+                <Status statusColor="green">Em andamentos</Status>
+              </td>
             </tr>
             <tr>
               <td>Tarefa</td>
               <td>30:00 minutos</td>
               <td>Há dois dias</td>
-              <td>Em andamentos</td>
+              <td>
+                <Status statusColor="red">Em andamentos</Status>
+              </td>
             </tr>
             <tr>
               <td>Tarefa</td>
               <td>30:00 minutos</td>
               <td>Há dois dias</td>
-              <td>Em andamentos</td>
+              <td>
+                <Status statusColor="red">Em andamentos</Status>
+              </td>
             </tr>
             <tr>
               <td>Tarefa</td>
               <td>30:00 minutos</td>
               <td>Há dois dias</td>
-              <td>Em andamentos</td>
+              <td>
+                <Status statusColor="red">Em andamentos</Status>
+              </td>
             </tr>
             <tr>
               <td>Tarefa</td>
               <td>30:00 minutos</td>
               <td>Há dois dias</td>
-              <td>Em andamentos</td>
+              <td>
+                <Status statusColor="red">Em andamentos</Status>
+              </td>
             </tr>
           </tbody>
         </table>
