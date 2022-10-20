@@ -50,7 +50,7 @@ export const Separator = styled.div`
   justify-content: center;
 `
 
-export const StartCountdowButton = styled.button`
+export const StartCountdownButton = styled.button`
   width: 100%;
   border: 0;
   padding: 1rem;
