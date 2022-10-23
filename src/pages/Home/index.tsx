@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react'
+import { useState } from "react"
 import { HandPalm, Play } from 'phosphor-react'
 
 import {
@@ -28,24 +28,7 @@ const newCycleFormValidationSchema = zod.object({
 
 type NewCycleFormData = zod.infer<typeof newCycleFormValidationSchema>
 
-interface Cycle {
-  id: string
-  task: string
-  minutesAmount: number
-  startDate: Date
-  interruptedDate?: Date
-  finishDate?: Date
-}
 
-interface CycleContextType {
-  activeCycle?: Cycle | undefined
-  activeCycleId: string | null
-  amountSecondsPassed: number
-  markCurrentCyclesAsFinished: () => void
-  setSecondsPassed: (second: number) => void
-}
-
-export const CyclesContext = createContext({} as CycleContextType)
 
 export function Home() {
   const [cycles, setCycles] = useState<Cycle[]>([])
