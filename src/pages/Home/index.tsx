@@ -3,7 +3,7 @@ import { HandPalm, Play } from 'phosphor-react'
 import {
   HomeContainer,
   StartCountdownButton,
-  StopCountdownButton
+  StopCountdownButton,
 } from './styles'
 
 import * as zod from 'zod'
@@ -25,7 +25,7 @@ const newCycleFormValidationSchema = zod.object({
   minutesAmount: zod
     .number()
     .min(5, 'O ciclo precisa ser no mínimo 5 minutos')
-    .max(60, 'O ciclo precisa ser no máximo 60 minutos')
+    .max(60, 'O ciclo precisa ser no máximo 60 minutos'),
 })
 
 type NewCycleFormData = zod.infer<typeof newCycleFormValidationSchema>
@@ -38,8 +38,8 @@ export function Home() {
     resolver: zodResolver(newCycleFormValidationSchema),
     defaultValues: {
       task: '',
-      minutesAmount: 0
-    }
+      minutesAmount: 0,
+    },
   })
 
   const { handleSubmit, watch, reset } = newCycleForm

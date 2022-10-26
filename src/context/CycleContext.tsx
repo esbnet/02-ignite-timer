@@ -3,7 +3,7 @@ import { Cycle, cyclesReducer } from '../reducers/cycles/reducer'
 import {
   addNewCycleAction,
   interruptCurrentCycleAction,
-  markCurrentCyclesAsFinishedAction
+  markCurrentCyclesAsFinishedAction,
 } from '../reducers/cycles/actions'
 
 interface CreateCycleData {
@@ -31,7 +31,7 @@ interface CycleContextProviderProps {
 export function CycleContextProvider({ children }: CycleContextProviderProps) {
   const [cyclesState, dispatch] = useReducer(cyclesReducer, {
     cycles: [],
-    activeCycleId: null
+    activeCycleId: null,
   })
 
   const [amountSecondsPassed, setAmountSecondsPassed] = useState(0)
@@ -48,7 +48,7 @@ export function CycleContextProvider({ children }: CycleContextProviderProps) {
       id,
       task: data.task,
       minutesAmount: data.minutesAmount,
-      startDate: new Date()
+      startDate: new Date(),
     }
     dispatch(addNewCycleAction(newCycle))
     setAmountSecondsPassed(0)
@@ -72,7 +72,7 @@ export function CycleContextProvider({ children }: CycleContextProviderProps) {
         createNewCycle,
         interruptCurrentCycle,
         markCurrentCyclesAsFinished,
-        setSecondsPassed
+        setSecondsPassed,
       }}
     >
       {children}
