@@ -9,7 +9,7 @@ export function CountDown() {
     activeCycleId,
     amountSecondsPassed,
     markCurrentCyclesAsFinished,
-    setSecondsPassed
+    setSecondsPassed,
   } = useContext(CyclesContext)
 
   const totalSeconds = activeCycle ? activeCycle.minutesAmount * 60 : 0
@@ -20,7 +20,7 @@ export function CountDown() {
       interval = setInterval(() => {
         const secondsDifference = differenceInSeconds(
           new Date(),
-          activeCycle.startDate
+          activeCycle.startDate,
         )
 
         if (secondsDifference >= totalSeconds) {
@@ -40,7 +40,7 @@ export function CountDown() {
     totalSeconds,
     activeCycleId,
     markCurrentCyclesAsFinished,
-    setSecondsPassed
+    setSecondsPassed,
   ])
 
   const currentSeconds = activeCycle ? totalSeconds - amountSecondsPassed : 0
