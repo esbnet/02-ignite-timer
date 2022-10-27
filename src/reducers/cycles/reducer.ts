@@ -27,6 +27,7 @@ export function cyclesReducer(state: CycleState, action: any) {
       const currentCycleIndex = state.cycles.findIndex((cycle) => {
         return cycle.id === state.activeCycleId
       })
+
       if (currentCycleIndex < 0) {
         return state
       }
@@ -46,8 +47,8 @@ export function cyclesReducer(state: CycleState, action: any) {
       }
 
       return produce(state, (draft) => {
-        draft.activeCycleId = null
         draft.cycles[currentCycleIndex].finishDate = new Date()
+        draft.activeCycleId = null
       })
     }
 
