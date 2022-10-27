@@ -3,7 +3,7 @@ import { HandPalm, Play } from 'phosphor-react'
 import {
   HomeContainer,
   StartCountdownButton,
-  StopCountdownButton,
+  StopCountdownButton
 } from './styles'
 
 import * as zod from 'zod'
@@ -11,11 +11,11 @@ import * as zod from 'zod'
 import { CountDown } from './components/CountDown'
 import { NewCycleForm } from './components/NewCycleForm'
 
-import { useForm, FormProvider } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { FormProvider, useForm } from 'react-hook-form'
 
-import { CyclesContext } from '../../context/CycleContext'
 import { useContext } from 'react'
+import { CyclesContext } from '../../context/CycleContext'
 
 const newCycleFormValidationSchema = zod.object({
   task: zod
