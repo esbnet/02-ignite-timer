@@ -38,6 +38,7 @@ export const BaseCountdownButton = styled.button`
     cursor: not-allowed;
   }
 `
+
 export const StartCountdownButton = styled(BaseCountdownButton)`
   background: ${(props) => props.theme['green-500']};
 
